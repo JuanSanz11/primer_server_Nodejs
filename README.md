@@ -1,76 +1,98 @@
-SERVIDOR Y REQUISICIONES
+# 🚀 Mi Primer Servidor con Node.js
 
-El primer desafio es crear un servidor que permita a los usuarios crear, obtener, guardar y eliminar un nuevo curso.
+El primer desafío es crear un servidor que permita a los usuarios **crear**, **obtener**, **guardar** y **eliminar** un curso.
 
-Fundamentos de Node.js
+---
 
-SSR: Server Side Rendering
-SPA: Single Page Application
-CSR: Client Side Rendering
+## 🧠 Fundamentos de Node.js
 
--Browser(Client) /usuarios
--API(Server)
-[
-  {name="Juan",idade:30},
-  {name="Daniela",idade:28},
-]
--Mobile-Web
+- **SSR**: Server Side Rendering  
+- **SPA**: Single Page Application  
+- **CSR**: Client Side Rendering  
+
+---
+
+## 🌐 Arquitectura
+
+Browser (Cliente) → /usuarios API (Servidor) → [ { name: "Juan", idade: 30 }, { name: "Daniela", idade: 28 } ] Mobile / Web
+
+---
+
+## 🔍 Anatomía de una URL
 
 https://api.meuapp.com/users/32?posts=true
 
-https:// => PROTOCOLO
-api => Subdominio
-meuapp.com => Dominio
-users => Recurso
-32 => Identificador / Parámetro
-?posts=true => Parámetro de busqueda (search/query param)
+- `https://` → **Protocolo**
+- `api` → **Subdominio**
+- `meuapp.com` → **Dominio**
+- `users` → **Recurso**
+- `32` → **Identificador / Parámetro**
+- `?posts=true` → **Parámetro de búsqueda (query param)**
 
+---
 
-Aplicación web (Front-end) <-> Servidor (Back-end) <-> Banco de Datos (Database)
+## 🧩 Flujo de Aplicación
 
+---
 
-BACK_END: (Postgree, SQL,...)
-FRONT_END: Construcción de interface (React Native,Vue, Angular, Polymer, Flutter, Kotlin, Svelte, Swift...)
-JSON: JavaScript Object Notation
-API: Application Programming Interface
-REST: Representational State Transfer
-HTTP: Hypertext Transfer Protocol
-URL: Uniform Resource Locator
-CRUD: Create, Read, Update, Delete
+## 🛠️ Tecnologías
 
+- **Back-end**: PostgreSQL, SQL...
+- **Front-end**: React Native, Vue, Angular, Polymer, Flutter, Kotlin, Svelte, Swift...
+- **JSON**: JavaScript Object Notation
+- **API**: Application Programming Interface
+- **REST**: Representational State Transfer
+- **HTTP**: Hypertext Transfer Protocol
+- **URL**: Uniform Resource Locator
+- **CRUD**: Create, Read, Update, Delete
 
-METODOS HTTP
+---
 
-GET/POST/OUT/PATCH/DELETE/HEAD
+## 📡 Métodos HTTP
 
-Route Param => Identificar recursos (obligatorio)
-Search/Query Param => modificar/filtrar  (No son obligatorios)
+- `GET` / `POST` / `PUT` / `PATCH` / `DELETE` / `HEAD`
 
-POST localhost:3333/users
-Request Body => Datos para creación/ actualización de un recurso (Obligatorio o opcional)
+### 🧭 Tipos de Parámetros
 
-Headers: envia metadatos, informaciones que no alteran el resultado/funcionamiento. 
+- **Route Param** → Identifica recursos (obligatorio)
+- **Query Param** → Modifica o filtra recursos (opcional)
 
+### 📨 Request Body
 
-HTTP status Code
+Datos enviados para crear o actualizar un recurso (obligatorio o opcional).
 
-2xx= Suceso
-3xx= Redireccionamiento
-4xx= error del cliente 
-5xx= Error de servidor/API
+### 📋 Headers
 
-201= Recurso creado (POST)
-202= Aceptado (PUT/PATCH)
-204= Sin retorno
-418= Im a teapot
+Metadatos que no alteran el resultado o funcionamiento de la solicitud.
 
+---
 
-Comandos
+## ✅ Códigos de Estado HTTP
 
-VSCode: RestClient Tools
-Install Node.js
-npm i
+- `2xx` → Éxito
+- `3xx` → Redirección
+- `4xx` → Error del cliente
+- `5xx` → Error del servidor/API
+
+### Ejemplos:
+
+- `201` → Recurso creado (POST)
+- `202` → Aceptado (PUT/PATCH)
+- `204` → Sin retorno
+- `418` → I'm a teapot ☕
+
+---
+
+## 🧰 Herramientas y Dependencias
+
+- **Editor**: VSCode + RestClient Tools
+- **Runtime**: Node.js
+
+### 📦 Instalación de dependencias
+
+```bash
 npm init -y
-npm i fastify
-npm i typescript @types/node -D
+npm install fastify
+npm install typescript @types/node -D
+npm install --save-dev pino-pretty
 npm run dev
